@@ -17,6 +17,7 @@ const Sidebar = () => {
     { path: '/fondo', name: '🎨 Efectos de Fondo' },
     { path: '/carga', name: '⏳ Efectos de Carga' },
     { path: '/especiales', name: '🎭 Efectos Especiales' },
+    { path: '/recursos', name: '📚 Recursos y Glosario' },
   ];
 
   return (

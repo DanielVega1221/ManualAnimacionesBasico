@@ -152,6 +152,68 @@
   color: #FF8AD8;
 }
 
+.recursos-card {
+  background: linear-gradient(135deg, #95F0D0 0%, #B4E4FF 100%);
+  border: 3px solid #667eea;
+}
+
+.help-section {
+  background: linear-gradient(135deg, #fff5e6 0%, #f0f9ff 100%);
+  border-left: 5px solid #95F0D0;
+}
+
+.beginner-guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  min-width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #FFB5E8 0%, #B4E4FF 100%);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.step-content p {
+  color: #5a6c7d;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.step-content a {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.step-content a:hover {
+  border-bottom-color: #667eea;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title {

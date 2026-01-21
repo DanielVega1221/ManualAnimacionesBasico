@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SplashScreen from './components/SplashScreen';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import EntradaPage from './pages/EntradaPage';
@@ -14,9 +16,24 @@ import HoverPage from './pages/HoverPage';
 import FondoPage from './pages/FondoPage';
 import CargaPage from './pages/CargaPage';
 import EspecialesPage from './pages/EspecialesPage';
+import RecursosPage from './pages/RecursosPage';
 import './App.css';
 
 function App() {
+  const [showSplash, setShowSplash] = useState(() => {
+    const splashSeen = sessionStorage.getItem('splashSeen');
+    return !splashSeen;
+  });
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+    sessionStorage.setItem('splashSeen', 'true');
+  };
+
+  if (showSplash) {
+    return <SplashScreen onComplete={handleSplashComplete} />;
+  }
+
   return (
     <BrowserRouter>
       <Routes>
@@ -35,6 +52,7 @@ function App() {
           <Route path="fondo" element={<FondoPage />} />
           <Route path="carga" element={<CargaPage />} />
           <Route path="especiales" element={<EspecialesPage />} />
+          <Route path="recursos" element={<RecursosPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

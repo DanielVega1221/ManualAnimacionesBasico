@@ -13,6 +13,36 @@
   padding-bottom: 1rem;
 }
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2c3e50;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.support-badge {
+  background: #B4E4FF;
+  cursor: help;
+}
+
 .demo-title {
   font-size: 2rem;
   color: #2c3e50;
@@ -63,9 +93,18 @@
   color: #2c3e50;
 }
 
+.control-btn.reset {
+  background: #95F0D0;
+  color: #2c3e50;
+}
+
 .control-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.control-btn:active {
+  transform: translateY(0);
 }
 
 .speed-control {
@@ -104,14 +143,33 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .preview-container {
   --animation-speed: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-container * {
+  animation-duration: calc(var(--base-duration, 1s) / var(--animation-speed)) !important;
 }
 
 .preview-container.paused * {
   animation-play-state: paused !important;
+}
+
+.preview-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 .demo-info {

@@ -13,6 +13,7 @@ const EntradaPage = () => {
       <AnimationDemo
         title="fadeIn"
         description="Aparición gradual mediante incremento de opacidad. Efecto suave y profesional."
+        difficulty="principiante"
         cssCode={`@keyframes fadeIn {
   from {
     opacity: 0;
@@ -53,6 +54,7 @@ const EntradaPage = () => {
       <AnimationDemo
         title="fadeInUp"
         description="Aparición desde abajo con desvanecimiento. Combina movimiento vertical con opacidad."
+        difficulty="principiante"
         cssCode={`@keyframes fadeInUp {
   from {
     opacity: 0;

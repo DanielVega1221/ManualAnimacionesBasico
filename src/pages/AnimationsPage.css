@@ -55,6 +55,7 @@
 /* Entrada animations */
 .fade-in-demo {
   animation: fadeInDemo 2s ease-out infinite;
+  --base-duration: 2s;
 }
 
 @keyframes fadeInDemo {
@@ -64,6 +65,7 @@
 
 .fade-in-up-demo {
   animation: fadeInUpDemo 2s ease-out infinite;
+  --base-duration: 2s;
 }
 
 @keyframes fadeInUpDemo {
@@ -79,6 +81,7 @@
 
 .fade-in-left-demo {
   animation: fadeInLeftDemo 2s ease-out infinite;
+  --base-duration: 2s;
 }
 
 @keyframes fadeInLeftDemo {
@@ -94,6 +97,7 @@
 
 .scale-in-demo {
   animation: scaleInDemo 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  --base-duration: 2s;
 }
 
 @keyframes scaleInDemo {
@@ -109,6 +113,7 @@
 
 .slide-up-demo {
   animation: slideUpDemo 2s ease-out infinite;
+  --base-duration: 2s;
 }
 
 @keyframes slideUpDemo {
@@ -125,6 +130,7 @@
 /* Salida animations */
 .fade-out-demo {
   animation: fadeOutDemo 2s ease-out infinite;
+  --base-duration: 2s;
 }
 
 @keyframes fadeOutDemo {
@@ -134,6 +140,7 @@
 
 .fade-out-down-demo {
   animation: fadeOutDownDemo 2s ease-out infinite;
+  --base-duration: 2s;
 }
 
 @keyframes fadeOutDownDemo {
@@ -149,6 +156,7 @@
 
 .slide-out-demo {
   animation: slideOutDemo 2s ease-out infinite;
+  --base-duration: 2s;
 }
 
 @keyframes slideOutDemo {
@@ -164,6 +172,7 @@
 
 .zoom-out-demo {
   animation: zoomOutDemo 2s ease-out infinite;
+  --base-duration: 2s;
 }
 
 @keyframes zoomOutDemo {
@@ -183,6 +192,7 @@
   overflow: hidden;
   background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
   animation: shimmerBg 3s infinite;
+  --base-duration: 3s;
 }
 
 .shimmer-demo::before {
@@ -194,6 +204,7 @@
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
   animation: shimmerDemo 2s infinite;
+  animation-duration: calc(2s / var(--animation-speed, 1));
 }
 
 @keyframes shimmerDemo {
@@ -203,6 +214,7 @@
 
 .sparkle-demo {
   animation: sparkleDemo 1.5s infinite;
+  --base-duration: 1.5s;
 }
 
 @keyframes sparkleDemo {
@@ -212,6 +224,7 @@
 
 .glow-pulse-demo {
   animation: glowPulseDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes glowPulseDemo {
@@ -245,6 +258,7 @@
 /* Pulsación animations */
 .pulse-demo {
   animation: pulseDemo 1.5s infinite;
+  --base-duration: 1.5s;
 }
 
 @keyframes pulseDemo {
@@ -254,6 +268,7 @@
 
 .pulse-subtle-demo {
   animation: pulseSubtleDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes pulseSubtleDemo {
@@ -263,6 +278,7 @@
 
 .heart-beat-demo {
   animation: heartBeatDemo 1.3s infinite;
+  --base-duration: 1.3s;
 }
 
 @keyframes heartBeatDemo {
@@ -275,6 +291,7 @@
 
 .scroll-pulse-demo {
   animation: scrollPulseDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes scrollPulseDemo {
@@ -291,6 +308,7 @@
 /* Flotación animations */
 .float-demo {
   animation: floatDemo 3s ease-in-out infinite;
+  --base-duration: 3s;
 }
 
 @keyframes floatDemo {
@@ -300,6 +318,7 @@
 
 .float-slow-demo {
   animation: floatSlowDemo 4s ease-in-out infinite;
+  --base-duration: 4s;
 }
 
 @keyframes floatSlowDemo {
@@ -309,6 +328,7 @@
 
 .bolt-float-demo {
   animation: boltFloatDemo 3s ease-in-out infinite;
+  --base-duration: 3s;
 }
 
 @keyframes boltFloatDemo {
@@ -323,6 +343,7 @@
 /* Rotación animations */
 .rotate-360-demo {
   animation: rotate360Demo 3s linear infinite;
+  --base-duration: 3s;
 }
 
 @keyframes rotate360Demo {
@@ -332,6 +353,7 @@
 
 .spin-demo {
   animation: spinDemo 2s linear infinite;
+  --base-duration: 2s;
 }
 
 @keyframes spinDemo {
@@ -342,6 +364,7 @@
 /* Rebote animations */
 .bounce-demo {
   animation: bounceDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes bounceDemo {
@@ -352,6 +375,7 @@
 
 .bounce-in-demo {
   animation: bounceInDemo 3s infinite;
+  --base-duration: 3s;
 }
 
 @keyframes bounceInDemo {
@@ -370,6 +394,7 @@
 
 .rubber-band-demo {
   animation: rubberBandDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes rubberBandDemo {
@@ -383,6 +408,7 @@
 
 .jello-demo {
   animation: jelloDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes jelloDemo {
@@ -397,6 +423,7 @@
 /* Sacudida animations */
 .shake-demo {
   animation: shakeDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes shakeDemo {
@@ -407,6 +434,7 @@
 
 .wobble-demo {
   animation: wobbleDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes wobbleDemo {
@@ -420,6 +448,7 @@
 
 .head-shake-demo {
   animation: headShakeDemo 2s infinite;
+  --base-duration: 2s;
 }
 
 @keyframes headShakeDemo {
